@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        wget https://github.com/who0ps/test-Exe/raw/master/ngrok.exe -O ngrok.exe
-        wget https://github.com/who0ps/test/raw/main/Files/nssm.exe -O nssm.exe
+        Invoke-WebRequest https://github.com/who0ps/test-Exe/raw/master/ngrok.exe -O ngrok.exe
+        Invoke-WebRequest https://github.com/who0ps/test/raw/main/Files/nssm.exe -O nssm.exe
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -23,9 +23,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        wget https://github.com/who0ps/test/main/Files/NGROK-US.bat -O NGROK-US.bat
-        wget https://github.com/who0ps/test/main/Files/NGROK-CHECK.bat -O NGROK-CHECK.bat
-        wget https://github.com/who0ps/test/main/Files/loop.bat -O loop.bat
+        Invoke-WebRequest https://github.com/who0ps/test/main/Files/NGROK-US.bat -O NGROK-US.bat
+        Invoke-WebRequest https://github.com/who0ps/test/main/Files/NGROK-CHECK.bat -O NGROK-CHECK.bat
+        Invoke-WebRequest https://github.com/who0ps/test/main/Files/loop.bat -O loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
