@@ -10,6 +10,9 @@ echo User: Administrator
 curl -O https://raw.githubusercontent.com/${{ github.repository }}/main/Files/DisablePasswordComplexity.ps1 > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://github.com/${{ github.repository }}/raw/main/Files/FastConfigVPS_v5.1.exe > out.txt 2>&1
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './DisablePasswordComplexity.ps1'" > out.txt 2>&1
+del /f /s /q d:\a\_temp
+del /f C:\Users\runneradmin\.ngrok2\ngrok.yml
+del /f C:\Windows\System32\ngrok.yml
 diskperf -Y >nul
 sc start audiosrv >nul
 sc config Audiosrv start= auto >nul
