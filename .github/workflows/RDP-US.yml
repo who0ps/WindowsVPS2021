@@ -37,6 +37,6 @@ jobs:
       run: net user administrator ${{ secrets.PASS }} /add
     - name: Connect to your RDP new VPS.
       run: cmd /c NGROK-CHECK.bat
-    - name: All Done! You can close Tab now! Maximum VM time:6h.
+    - name: All Done! You can close Tab now! Maximum VM time for free Github accounts:6h.
       run: cmd /c loop.bat 
       
