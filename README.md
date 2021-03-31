@@ -6,4 +6,4 @@ Free VPS (Windows Server 2019, 7Gb ram, 250 Gb SSD)
 4. go Actions -> CI and Run workflow
 5. open task and take RDP ip and creds
 
-_Maximum VM time:6h_ - ?
+_Maximum VM time:6h_ - Limit from Github for free accounts
